@@ -1,6 +1,5 @@
 
-![picreadme](https://user-images.githubusercontent.com/96126445/194258061-c87d31d3-cb13-4074-8bcc-605555b567fa.png)
-
+  <p><img src="https://user-images.githubusercontent.com/96126445/194258061-c87d31d3-cb13-4074-8bcc-605555b567fa.png" alt="doctors smile picture" width="650 px height= 300 px"></p> 
 # Full Stack Project
 
 
