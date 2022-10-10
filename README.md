@@ -1,6 +1,8 @@
 
-  <p><img src="https://user-images.githubusercontent.com/96126445/194258061-c87d31d3-cb13-4074-8bcc-605555b567fa.png" alt="doctors smile picture" width="450 px height= 200 px       display: flex;
-      justify-content: center;"></p> 
+      
+      <p align="center">
+  <img src="https://user-images.githubusercontent.com/96126445/194258061-c87d31d3-cb13-4074-8bcc-605555b567fa.png" alt="doctors smile picture" />
+</p>
 # Full Stack Project
 
 
