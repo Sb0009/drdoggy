@@ -1,8 +1,6 @@
+!
+[dogg](https://user-images.githubusercontent.com/96126445/194939158-1f000e2a-97c0-413f-a870-e0c928c7bc97.JPG)
 
-      
-      <p align="center">
-  <img src="https://user-images.githubusercontent.com/96126445/194258061-c87d31d3-cb13-4074-8bcc-605555b567fa.png" alt="doctors smile picture"
-</p>
 # Full Stack Project
 
 
