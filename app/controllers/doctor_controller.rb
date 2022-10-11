@@ -8,7 +8,8 @@ class DoctorController < ApplicationController
   end
 
   # GET /doctors/1 or /doctors/1.json
-  def show; end
+#   CORRECTION HERE ----- def show
+#     ; end
 
   # GET /doctors/new
   def new
