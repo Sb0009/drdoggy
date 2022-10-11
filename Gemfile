@@ -3,7 +3,17 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.2"
+ruby "3.1.2"
+
+# Bootstrap https://rubygems.org/gems/bootstrap
+gem 'bootstrap', '~> 4.2', '>= 4.2.1'
+# https://github.com/plataformatec/devise
+gem 'devise', '~> 4.5'
+# http://www.rubydoc.info/gems/jquery-rails/4.3.3
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+# https://rubygems.org/gems/haml
+gem 'haml', '~> 5.0', '>= 5.0.4'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
@@ -19,7 +29,7 @@ gem "puma", "~> 5.6"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
-gem "devise"
+
 
 # Hotwire"s SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
