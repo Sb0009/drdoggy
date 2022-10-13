@@ -8,16 +8,25 @@
 
 
 
-# PatientLib
-### An API for A scheduling medical appointment platform built with Ruby on Rails.
+# DrDoggy
+### An API for  scheduling medical appointment platform built with Ruby on Rails.
 
 
 
-## Built With
+## Technologies
 
 - Ruby on Rails version 7.0.4
--
+- Ruby 3.1.2 
 - PostgreSQL
+- MVC Pattern
+- Devise
+- Test Driven Development (TDD with rspec and capybara)
+
+## CRUD
+![root#index-page](./public/image/root-index-page-with-category-sort.png)
+![show-page](./public/image/show-page.png)
+![create-page](./public/image/create-page.png)
+![edit-page](./public/image/edit-page.png
 
 
 ## Endpoints : /api/v1/
@@ -36,17 +45,17 @@ POST | appointments | False | scheduling an appointment
 GET | appointments | False | Fetch appointments for a specific user
 GET | appointments | False | Admin fetches all appointments  
 
-## Deployment 🧧
+## Deployment 🧧 
 
-[Backend APIs Live Link](https://patientlib.herokuapp.com/)
+[Backend APIs Live Link](https://drdoggy.herokuapp.com/)
 
-[Frontend Live Link](https://patientlib.herokuapp.com/)
+[Frontend Live Link](https://drdoggy.herokuapp.com/)
 
 ## Getting Started
 
 To get a copy up and running follow these simple example steps:-
 
-- Clone `https://github.com/Sb0009/patientlib` to your local machine.
+- Clone `https://github.com/Sb0009/drdoggy` to your local machine.
 - Run `bundle install` to install dependancies.
 - Run `rails s` to to run the application in development mode.
 - Use postman to test the endpoints.
