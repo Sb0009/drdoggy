@@ -1,3 +1,2 @@
 web: bundle exec puma -C config/puma.rb
-web: bin/rails server -p ${PORT:-5000} -e $RAILS_ENV
-release: bundle exec rails db:migrate
+api: PORT=3000 bundle exec rails server
