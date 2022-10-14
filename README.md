@@ -1,5 +1,5 @@
 
- <p><img src="(https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png" alt="landingpage-doctorclinic" width="350 px"></p> 
+ <p><img src="https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png" alt="landingpage-doctorclinic" width="350 px"></p> 
 
 
 
