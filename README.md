@@ -1,7 +1,6 @@
-![3](https://user-images.githubusercontent.com/96126445/195829862-8ff6ae7a-db2c-4c34-a0ed-e0459daec07c.png)
 
- <p><img src="https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png" alt="landingpage-doctorclinic" width="350 px"><img src="https://user-images.githubusercontent.com/96126445/195829435-8b6ba9bc-248c-4f1a-aec3-99ecc3f26607.png"
- alt="patient-already-login-doctorclinic" width="350 px"></p> 
+ <p><img src="https://user-images.githubusercontent.com/96126445/195829435-8b6ba9bc-248c-4f1a-aec3-99ecc3f26607.png"
+ alt="patient-already-login-doctorclinic" width="350 px"><img src="https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png" alt="landingpage-doctorclinic" width="350 px"><img src="https://user-images.githubusercontent.com/96126445/195829862-8ff6ae7a-db2c-4c34-a0ed-e0459daec07c.png" alt="register-page-doctorclinic" width="350 px"></p> 
 
 
 
