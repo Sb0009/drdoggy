@@ -1,7 +1,7 @@
 
  <p><img src="https://user-images.githubusercontent.com/96126445/195832417-f05efdd5-69a6-4dec-b004-60a6f8d422d2.png"
- alt="patient-already-login-doctorclinic" width="333 px" display: flex;><img src="https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png" alt="landingpage-doctorclinic" width="333 px" display: flex;
-  justify-content: center;><img src="https://user-images.githubusercontent.com/96126445/195829862-8ff6ae7a-db2c-4c34-a0ed-e0459daec07c.png" alt="register-page-doctorclinic" width="333 px" display: flex;
+ alt="patient-already-login-doctor-clinic" width="333 px" display: flex;><img src="https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png" alt="landing-page-doctor-clinic" width="333 px" display: flex;
+  justify-content: center;><img src="https://user-images.githubusercontent.com/96126445/195829862-8ff6ae7a-db2c-4c34-a0ed-e0459daec07c.png" alt="register-page-doctor-clinic" width="333 px" display: flex;
   justify-content: space-between;></p> 
 
 
