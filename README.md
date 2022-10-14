@@ -1,5 +1,5 @@
-![1](https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png)
 
+ <p><img src="(https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png?raw=true" alt="flowchart" width="350 px"></p> 
 
 
 
