@@ -1,8 +1,7 @@
 
  <p><img src="https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png" alt="landingpage-doctorclinic" width="350 px"></p> 
 
- <p><img src="https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png" alt="landingpage-doctorclinic" width="350 px"></p> 
-![2](https://user-images.githubusercontent.com/96126445/195829230-915efc3d-be0d-475f-b446-005e39f2d453.png)
+ <p><img src="" alt="landingpage-doctorclinic" width="350 px"></p> 
 
 
 
