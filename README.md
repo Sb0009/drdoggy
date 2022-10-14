@@ -1,6 +1,6 @@
 
  <p><img src="https://user-images.githubusercontent.com/96126445/195830565-5a38a496-c357-4299-95b3-24b7db91718d.png"
- alt="patient-already-login-doctorclinic" width="300 px"><img src="https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png" alt="landingpage-doctorclinic" width="350 px"><img src="https://user-images.githubusercontent.com/96126445/195829862-8ff6ae7a-db2c-4c34-a0ed-e0459daec07c.png" alt="register-page-doctorclinic" width="350 px"></p> 
+ alt="patient-already-login-doctorclinic" width="350 px"><img src="https://user-images.githubusercontent.com/96126445/195827857-41369323-e1ae-4f0c-8d4d-419579ee6071.png" alt="landingpage-doctorclinic" width="350 px"><img src="https://user-images.githubusercontent.com/96126445/195829862-8ff6ae7a-db2c-4c34-a0ed-e0459daec07c.png" alt="register-page-doctorclinic" width="350 px"></p> 
 
 
 
