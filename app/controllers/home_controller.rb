@@ -1,12 +1,6 @@
 class HomeController < ApplicationController
 
-  skip_before_action :authorized, only: [:index], :raise => false
-
-  def index
-
-  end
-
-  def new
-
+  def home_controller?
+    controller_name == 'home'
   end
 end

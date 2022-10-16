@@ -299,7 +299,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bootsnap
+  bootsnap (>= 1.4.4)
   bootstrap (~> 4.2, >= 4.2.1)
   brakeman
   bundler-audit
@@ -318,6 +318,7 @@ DEPENDENCIES
   rspec-rails
   rubocop-rails
   rubocop-rspec
+  sassc-rails (~> 2.1)
   selenium-webdriver
   sprockets-rails
   stimulus-rails

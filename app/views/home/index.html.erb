@@ -1,4 +1,218 @@
-<h1>Home#index</h1>
-<p>Find me in app Dr Doggy/views/home/index.html.erb</p>
+
+<h3 class="text-center" style="background-color:#272327;color: #fff;">Make Appoinment</h3>
+<h3 class="text-center" style="background-color:#272327;color: #fff;">Already Patient?</h3>
+
+<div class="col-md-12">
+
+  <label>
+    Name: <input type="text" name="name" value="" placeholder="Full name" required>
+  </label><br><br>
+
+  <label>
+    Email: <input type="email" name="email"  value="" placeholder="email" required>
+  </label><br><br>
+
+  <label>
+    Phone: <input type="number" name="contact"  placeholder="contact no" required="required" pattern="[0-9]{10,11}" title="please enter only numbers between 10 to 11 for mobile no."/>
+  </label><br><br>
+
+  <label>
+    Address: <input type="text" name="address" value="" placeholder="address" required>
+  </label><br><br>
+  <label>
+    Category: <select name="expertise" required>
+    <option>-Select-</option>
+    <option>Medicine</option>
+    <option>Heart</option>
+    <option>Bone</option>
+    <<option>kedney</option>
+    <option>Cardiologist</option>
+    <option>Plastic Surgeon</option>
+    <option>General Physician</option>
+  </select>
+  </label><br><br>
+  <label>
+    Doctor: <select name="doctor" required>
+    <option>-Select-</option>
+    <option>OBGYN Doctors</option>
+    <option>E.N.T specialist</option>
+    <option>Nephrologist</option>
+    <<option>Radiologist</option>
+    <option>Cardiologist Doctors</option>
+    <option>Plastic Surgeon </option>
+    <option>General Physician </option>
+  </select>
+  </label><br><br>
+
+  <label>
+    Date: <input type="date" name="date" placeholder="choose ur date" >
+  </label><br><br>
+
+
+
+  <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+
+
+  <body>
+
+  <!-- header section starts  -->
+
+  <header class="header fixed-top">
+
+    <div class="container">
+
+      <div class="row align-items-center justify-content-between">
+
+        <a href="#home" class="logo">Make<span>Appointment</span></a>
+
+        <nav class="nav">
+          <a href="#patient">login ?</a>
+        </nav>
+
+        <a href="#contact" class="link-btn">Contact</a>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- header section ends -->
+
+  <!-- home section starts  -->
+
+  <section class="home" id="home">
+
+    <div class="container">
+
+      <div class="row min-vh-100 align-items-center">
+        <div class="content text-center text-md-left">
+          <a href="#contact" class="link-btn">make appointment</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- home section ends -->
+
+  <!-- about section starts  -->
+
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <div class="row align-items-center">
+
+        <div class="col-md-6 image">
+          <img src="images/about-img.jpg" class="w-100 mb-5 mb-md-0" alt="">
+        </div>
+
+        <div class="col-md-6 content">
+
+
+          <a href="#contact" class="link-btn">make appointment</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- about section ends -->
+
+
+
+
+
+  <!-- contact section starts  -->
+
+  <section class="contact" id="contact">
+
+
+
+
+      <span>Enter your name :</span>
+      <input type="text" name="name" placeholder="Enter your name" class="box" required>
+      <span>Enter your email :</span>
+      <input type="email" name="email" placeholder="Enter your email" class="box" required>
+      <span>Enter your number :</span>
+      <input type="number" name="number" placeholder="Enter your number" class="box" required>
+      <span>Enter appointment date :</span>
+      <input type="datetime-local" name="date" class="box" required>
+      <input type="submit" value="make appointment" name="submit" class="link-btn">
+
+  </section>
+
+  <!-- contact section ends -->
+
+  <!-- footer section starts  -->
+
+  <section class="footer">
+
+    <div class="box-container container">
+
+      <div class="box">
+        <i class="fas fa-phone"></i>
+        <h3>phone number</h3>
+        <p>+33 6 98 92 49 46</p>
+
+      </div>
+
+      <div class="box">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>0ur address</h3>
+        <p>Holberton, France - Paris</p>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-clock"></i>
+        <h3>opening hours</h3>
+        <p>10:00am to 07:00pm</p>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-envelope"></i>
+        <h3>email address</h3>
+        <p>sihambadyine@gmail.com</p>
+
+      </div>
+
+    </div>
+
+
+
+  </section>
+
+  <!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+  <!-- custom js file link  -->
+  <script src="js/script.js"></script>
+
+  </body>
+
+
+  <button name="submit" type="submit" style="margin-left:60px;width: 85px;border-radius: 3px;">Check</button> <br>
+
+</div>	<!-- col-md-12 -->
+
+
 
 
