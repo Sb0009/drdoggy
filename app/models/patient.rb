@@ -1,9 +1,10 @@
 class Patient < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-  has_many :appointments
-  has_many :doctors, through: :appointments
-  belongs_to :city
+  has_and_belongs_to_many :doctors
+  validates :name, presence: true
+  validates :email, presence: true
+  scope :under_years, ->(count) { where("birthdate >= ? ", Date.today - count.years) }
+
+  def build_address
+    # code here
+  end
 end

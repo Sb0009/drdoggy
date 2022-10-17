@@ -21,6 +21,10 @@ class CitiesController < ApplicationController
   end
 
   # POST /cities or /cities.json
+  def city_url(city)
+    # code here
+  end
+
   def create
     @city = City.new(city_params)
 
