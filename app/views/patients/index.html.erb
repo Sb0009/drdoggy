@@ -1,0 +1,39 @@
+<!--<p id="notice"><%#= notice %></p>-->
+
+<h1>Patients</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th colspan="4"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @patients.each do |patient| %>
+    <tr>
+      <td><%= patient.name %></td>
+      <td><%= patient.email %></td>
+      <td><%= link_to 'Show', patient %></td>
+      <td><% def can?
+               # code here
+             end
+             if can? %><%= link_to 'Edit', edit_patient_path(patient) %><% end %></td>
+      <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      <td><%= link_to 'Email', email_path(patient) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= def paginate
+      # code here
+    end
+    paginate  %>
+
+<br>
+
+<%= link_to 'New Patient', new_patient_path %>
