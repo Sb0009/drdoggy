@@ -5,8 +5,9 @@
 
  <p><img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png"
  alt="patient-already" width="350 px" display: flex;
- <img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png"
- alt="patient-already" width="350 px" display: flex;justify-content: center;>
+         <img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png"
+ alt="patient-already" width="350 px" display: flex;
+         
  
  <img src="https://user-images.githubusercontent.com/96126445/196551086-5a5c7347-f7b1-4807-9808-4768ad63d508.png" alt="signin" width="350 px" 
                                                                                   
