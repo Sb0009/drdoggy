@@ -1,10 +1,12 @@
 
 
+
+
+
  <p><img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png"
- alt="patient-already" width="450 px" display: flex;
-         <img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png"
- alt="patient-already" width="450 px" display: flex;justify-content: center;>
- <img src="https://user-images.githubusercontent.com/96126445/196551086-5a5c7347-f7b1-4807-9808-4768ad63d508.png" alt="signin" width="450 px"</p> 
+ alt="patient-already" width="350 px" display: flex;<img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png"
+ alt="patient-already" width="350 px" display: flex;justify-content: center;><img src="https://user-images.githubusercontent.com/96126445/196551086-5a5c7347-f7b1-4807-9808-4768ad63d508.png" alt="signin" width="350 px"  <img src="https://user-images.githubusercontent.com/96126445/196551544-f5c1f997-9673-4258-a206-292659656670.png"
+ alt="patient-already" width="350 px" display: flex;justify-content: center; <img src="https://user-images.githubusercontent.com/96126445/196551572-e99e6f0d-6116-450b-a894-6e47436bb7c3.png"alt="404" width="350 px" display: flex;justify-content: center;<img src="https://user-images.githubusercontent.com/96126445/196551557-4e803b66-3203-46fb-9639-a501f714074b.png"alt="delete" width="350 px" display: flex;justify-content: center;  </p> 
 
 
 
