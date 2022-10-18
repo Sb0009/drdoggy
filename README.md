@@ -4,20 +4,13 @@
 
 
  <p><img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png"
- alt="patient-already" width="350 px" display: flex;
+ alt="patient-already" width:"33 px" display: flex;
 
+<img src="https://user-images.githubusercontent.com/96126445/196556057-f0e868cb-cb1d-4416-8a45-af35e4504b1d.png" style=" width: 33px ; display:center "  
 
+<img src="https://user-images.githubusercontent.com/96126445/196555805-37eca7f8-ef9b-401c-828c-d9057861ee06.png style=" width: 33px  " 
+<img src= "https://user-images.githubusercontent.com/96126445/196555838-8f0db65d-367f-4812-a5fd-ec1aa3d471e7.png"style=" width:33 px ; display: justify:content "  
 
-
-<img src="https://user-images.githubusercontent.com/96126445/196554057-724c2c91-11cf-424a-987c-226cc924a654.png"
- alt="sign-in" width="350 px" display: center;
- <img src=https://user-images.githubusercontent.com/96126445/196554325-483b6780-fb52-4836-a016-a5c452de1626.png" width="350 px" display: center;justify:content;
-
-
-         
-<img src="https://user-images.githubusercontent.com/96126445/196554397-defb7b91-a8dd-4836-a060-a6b901e8f084.png"
- alt="profile-page" width="350 px" display: flex; </p>
-         
 
 # Full Stack Project
 
