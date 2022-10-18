@@ -1,7 +1,7 @@
 
  <p><img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png"
  alt="patient-already-login-doctor-clinic" width="450 px" display: flex;
-  justify-content: center;><img src="https://user-images.githubusercontent.com/96126445/195829862-8ff6ae7a-db2c-4c34-a0ed-e0459daec07c.png" alt="register-page-doctor-clinic" width="450 px"</p> 
+  justify-content: center;><img src="" alt="register-page-doctor-clinic" width="450 px"</p> 
 
 
 
