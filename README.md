@@ -4,17 +4,17 @@
 
 
  <p><img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png"
- alt="patient-already" width="350 px" display: flex;</p>
+ alt="patient-already" width="350 px" display: flex;
 
 
 
 
- <p><img src="https://user-images.githubusercontent.com/96126445/196554057-724c2c91-11cf-424a-987c-226cc924a654.png"
- alt="sign-in" width="350 px" display: center;justify:content; <img src=https://user-images.githubusercontent.com/96126445/196554325-483b6780-fb52-4836-a016-a5c452de1626.png" width="350 px" display: center;justify:content;</p>
+<img src="https://user-images.githubusercontent.com/96126445/196554057-724c2c91-11cf-424a-987c-226cc924a654.png"
+ alt="sign-in" width="350 px" display: center;justify:content; <img src=https://user-images.githubusercontent.com/96126445/196554325-483b6780-fb52-4836-a016-a5c452de1626.png" width="350 px" display: center;justify:content;
 
 
          
- <p><img src="https://user-images.githubusercontent.com/96126445/196554397-defb7b91-a8dd-4836-a060-a6b901e8f084.png"
+<img src="https://user-images.githubusercontent.com/96126445/196554397-defb7b91-a8dd-4836-a060-a6b901e8f084.png"
  alt="profile-page" width="350 px" display: flex; </p>
          
 
