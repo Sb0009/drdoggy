@@ -1,9 +1,17 @@
 
- <p><img src="https://user-images.githubusercontent.com/96126445/195832417-f05efdd5-69a6-4dec-b004-60a6f8d422d2.png"
- alt="patient-already-login-doctor-clinic" width="450 px" display: flex;
-  justify-content: center;><img src="https://user-images.githubusercontent.com/96126445/195829862-8ff6ae7a-db2c-4c34-a0ed-e0459daec07c.png" alt="register-page-doctor-clinic" width="450 px" display: flex;
-  justify-content: space-between;></p> 
 
+
+
+  <p><img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png" alt="drdoggy"
+ width="150 px">
+ <img src="https://user-images.githubusercontent.com/96126445/196557250-9c8177e0-7389-42d7-9cf5-c0ff590410c5.png" alt="login" width="150 px">
+ <img src="https://user-images.githubusercontent.com/96126445/196557533-032d2a53-b500-4d42-aca8-cb2e9833623b.png" alt="drdoggy"
+ width="150 px"><img src="https://user-images.githubusercontent.com/96126445/196558212-f60847fd-d13f-4a1e-9984-420f3e3ad5b1.png" alt="drdoggy"
+ width="150 px">
+</p>
+ 
+
+</p> 
 
 
 
