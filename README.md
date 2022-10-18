@@ -4,7 +4,7 @@
 
 
  <p><img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png"
- alt="patient-already"
+ alt="patient-already" width: 33px;
 
 
 
