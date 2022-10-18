@@ -6,7 +6,7 @@
  width="250 px">
  <img src="https://user-images.githubusercontent.com/96126445/196557250-9c8177e0-7389-42d7-9cf5-c0ff590410c5.png" alt="login"
 
- width="250 px">
+ width="50 px">
  <img src="https://user-images.githubusercontent.com/96126445/196557533-032d2a53-b500-4d42-aca8-cb2e9833623b.png" alt="drdoggy"
  width="250 px"> </p>
  
