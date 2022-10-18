@@ -4,12 +4,8 @@
 
 
  <p><img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png"
- alt="patient-already" width:"33 px" display: flex;
+ alt="patient-already" width:"53 px" display: flex;
 
-<img src="https://user-images.githubusercontent.com/96126445/196556057-f0e868cb-cb1d-4416-8a45-af35e4504b1d.png" style=" width: 33px ; display:center "  
-
-<img src="https://user-images.githubusercontent.com/96126445/196555805-37eca7f8-ef9b-401c-828c-d9057861ee06.png style=" width: 33px  " 
-<img src= "https://user-images.githubusercontent.com/96126445/196555838-8f0db65d-367f-4812-a5fd-ec1aa3d471e7.png"style=" width:33 px ; display: justify:content "  
 
 
 # Full Stack Project
