@@ -10,7 +10,8 @@
 
 
 <img src="https://user-images.githubusercontent.com/96126445/196554057-724c2c91-11cf-424a-987c-226cc924a654.png"
- alt="sign-in" width="350 px" display: center;justify:content; <img src=https://user-images.githubusercontent.com/96126445/196554325-483b6780-fb52-4836-a016-a5c452de1626.png" width="350 px" display: center;justify:content;
+ alt="sign-in" width="350 px" display: center;
+ <img src=https://user-images.githubusercontent.com/96126445/196554325-483b6780-fb52-4836-a016-a5c452de1626.png" width="350 px" display: center;justify:content;
 
 
          
