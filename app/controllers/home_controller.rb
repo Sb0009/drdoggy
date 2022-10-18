@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   end
 
   def contact
-    @contact = Contact.new(params[:contact])
+    @contact = Contact.new()
     if request.post?
       if @contact.save
         flash.now[:notice] = 'Your Message Successfully Sent.'

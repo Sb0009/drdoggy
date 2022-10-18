@@ -6,13 +6,13 @@
 
 
 
-
+<html>
 
 
 <div class="text-center">
 
   <h3>
-    Welcome at Dr Doggy APP
+    Welcome at Dr Doggy APP -Dashboard
 
   </h3>
 </div>
@@ -31,6 +31,7 @@
 </head>
 <body>
 <div layout:fragment="dashboard-contents">
+  <%= image_tag "start.png" , size: "300X700", :alt => "dr login"%>
 
   <form method="post" class="form mt-2" th:object="${doctor}"
         th:action="@{'/partner/doctors/edit/'+${id}}">
@@ -166,7 +167,7 @@
 
     </div>
     <!-- card -->
-
+    </div>
   </form>
 
   <script>

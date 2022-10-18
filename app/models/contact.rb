@@ -9,6 +9,7 @@ class Contact < ActiveRecord::API
   def self.after_create(contact)
     # code here
     @contact = contact
+    @contact = contact
   end
 
   after_create :send_mail
