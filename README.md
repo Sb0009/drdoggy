@@ -5,8 +5,6 @@
   <p><img src="https://user-images.githubusercontent.com/96126445/196426267-ef783879-6172-4ab5-9506-7fd53e41b1b3.png" alt="drdoggy"
  width="150 px">
  <img src="https://user-images.githubusercontent.com/96126445/196557250-9c8177e0-7389-42d7-9cf5-c0ff590410c5.png" alt="login" width="150 px">
-<img src="https://user-images.githubusercontent.com/96126445/196558212-f60847fd-d13f-4a1e-9984-420f3e3ad5b1.png" alt="drdoggy"
- width="150 px">
 </p>
  
 
