@@ -1,16 +1,31 @@
 <h1>Doctors#show</h1>
 <p>Find me in app/views/doctors/show.html.erb</p>
 
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%#= notice %></p>-->
 
-
+<h2>LIST</h2>
 <p>
   <strong>Name:</strong>
-  <%= @doctor.name %>
+  <%#= @doctor.name %>
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @doctor.email %>
+  <strong>Speciality:</strong>
+  <%#= @doctor.email %>
 </p>
 
+<p>
+  <strong>City:</strong>
+  <%#= @doctor.email %>
+</p>
+
+    <div class="row">
+      <div class="col-md-3">
+        <%= link_to 'Log out', '/destroy_session'%>
+      </div></div>
+
+Id: <%= @doctor.index %><br>
+<!--Name: <%#= @doctor.name %><br>-->
+<!--City: <%#= @doctor.city %><br>-->
+<!--Speciality: <%#= @doctor.speciality%><br><br>-->
+<%= link_to "All Doctors", "/doctors"%>

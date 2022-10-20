@@ -1,91 +1,49 @@
+# frozen_string_literal: true
+
 class PatientsController < ApplicationController
-  attr_accessor :patients
-
-  def self.load_and_authorize_resource
-    # code here
-  end
-
-  load_and_authorize_resource
-  before_action :set_patient, only: %i[ show edit update destroy ]
-
-  # GET /patients or /patients.json
-  def index
-    @patients = Patient.all
-  end
-
-  # GET /patients/1 or /patients/1.json
-  def show
-    respond_to do |format|
-      format.html
-
-      end
-    end
-  end
-
-  # GET /patients/new
   def new
     @patient = Patient.new
-    @patient.build_address
   end
 
-  # GET /patients/1/edit
-  def edit
-  end
-
-  # POST /patients or /patients.json
-  def create
-    @patient = Patient.new(patient_params)
-
-    respond_to do |format|
-      if @patient.save
-
-        format.html { redirect_to @patient, notice: "Patient was successfully created." }
-        format.json { render :show, status: :created, location: @patient }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @patient.errors, status: :unprocessable_entity }
-      end
+  def index
+    if params[:id]
+      doctor = Doctor.find(params[:id])
+      @patients = doctor.patients
+    else
+      @patients = Patient.all
     end
   end
 
-  # PATCH/PUT /patients/1 or /patients/1.json
-  def update
-    respond_to do |format|
-      if @patient.update(patient_params)
-        format.html { redirect_to @patient, notice: "Patient was successfully updated." }
-        format.json { render :show, status: :ok, location: @patient }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @patient.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /patients/1 or /patients/1.json
-  def destroy
-    @patient.destroy
-    respond_to do |format|
-      format.html { def patients_url
-        # code here
-      end
-
-      redirect_to patients_url, notice: "Patient was successfully destroyed." }
-      format.json { head :no_content }
-    end
-  end
-
-  private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_patient
+  def show
     @patient = Patient.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
-  def patient_params
-    params.require(:patient).permit(:name, :email, :dob ,
-                                    :address_attributes => [:id, :city],
-                                    telephones_attributes: [ :id,  :number, :_destroy ],
-                                    doctor_ids: []
-    )
+  def create
+    patient = Patient.new
+    patient.name = params[:patient][:name]
+    patient.age = params[:patient][:age]
+    patient.address = params[:patient][:address]
+    patient.gender = params[:patient][:gender]
+    patient.save
+    redirect_to '/patients'
   end
 
+  def destroy
+    @patient = Patient.find(params[:id])
+    @patient.destroy
+    redirect_to '/patients'
+  end
+
+  def edit
+    @patient = Patient.find(params[:id])
+  end
+
+  def update
+    @patient = Patient.find(params[:id])
+    if @patient.update(name: params[:patient][:name], age: params[:patient][:age],
+                       address: params[:patient][:address],
+                       gender: params[:patient][:gender])
+      redirect_to '/patients'
+    end
+  end
+end

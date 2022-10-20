@@ -1,4 +1,14 @@
-<h1>New Patient</h1>
+<h1>Enter Form Patient</h1>
 
-<%= render 'form', patient: @patient %>
+
 <%= link_to 'Back', patients_path %>
+<h2>Add new Patient</h2>
+<%= link_to 'Submit', patients_path %>
+<br><br/>
+<%form_for @patient do |p| %>
+  Name: <%= :name %><br><br>
+  Age: <%= :age %><br><br>
+  City: <%= :city%><br><br>
+  Phone: <%= :phone %><br><br>
+  <br><%= p.submit%>
+<% end %>

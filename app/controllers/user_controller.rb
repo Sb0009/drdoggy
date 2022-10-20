@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # app/controllers/users_controller.rb
 class UsersController < ApplicationController
   def index
@@ -47,6 +49,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(File.expand_path(:user)).permit(:name, :email, :password, :password_confirmation)
+    params.require(File.expand_path('': user)).permit(:name, :email, :password, :password_confirmation)
   end
 end

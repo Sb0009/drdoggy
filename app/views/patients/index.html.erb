@@ -1,39 +1,33 @@
-<!--<p id="notice"><%#= notice %></p>-->
-
-<h1>Patients</h1>
-
-<table>
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th colspan="4"></th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @patients.each do |patient| %>
+<table size="50%" padding="3" marging="3" border="3" bordercolor="blue">
+  <caption><br>Patients<br></caption>
     <tr>
-      <td><%= patient.name %></td>
-      <td><%= patient.email %></td>
-      <td><%= link_to 'Show', patient %></td>
-      <td><% def can?
-               # code here
-             end
-             if can? %><%= link_to 'Edit', edit_patient_path(patient) %><% end %></td>
-      <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>Contact</th>
+      <th>Gender</th>
+      <th>Patient Infos</th>
 
-      <td><%= link_to 'Email', email_path(patient) %></td>
     </tr>
-  <% end %>
-  </tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.id %></td>
+        <td><%= patient.name %></td>
+        <td><%= patient.age %></td>
+        <td><%= patient.city %></td>
+        <td><%= patient.contact %></td>
+        <td><%= patient.gender %></td>
+        <td>
+          <%= link_to "Edit","/patients/edit/#{patient.id}" %>Edit
+          <%= link_to "Delete","/patients/destroy/#{patient.id}" %>Destroy
+          <%= link_to "Show", "/patients/#{patient.id}"%>Show
+          <%= link_to "All doctors" ,doctors_path(id: patient.id) %> All Doc
+        </td>
+      </tr>
+    <% end %>
+
 </table>
-
-<%= def paginate
-      # code here
-    end
-    paginate  %>
-
 <br>
-
-<%= link_to 'New Patient', new_patient_path %>
+<br>
+<%= link_to "New Patient",new_patient_path %>

@@ -1,29 +1,33 @@
-<h1> Handle Doctors #index</h1>
-<p>Find me in app/views/doctors/index.html.erb</p>
-<!--<p id="notice"><%#= notice %></p>-->
-<%= image_tag "start.png" , size: "300X300", :alt => "dr login"%>
-
-<h1>Physicians</h1>
-<%= link_to 'New Doctor', new_doctor_path %>
-<table>
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th colspan="2"></th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @doctors.each do |doc| %>
+<table size="50%" padding="3" cellspacing="3" border="3" bordercolor="green">
+  <caption><br>Doctor Details<br></caption>
     <tr>
-      <td><%= doc.name %></td>
-      <td><%= doc.email %></td>
-      <td><%= link_to 'List', doc %></td>
-      <td><%= link_to 'Edit', edit_doctor_path(doc) %></td>
-      <td><%= link_to 'Destroy', doc, method: :delete, data: { confirm: 'Are u sure' } %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Speciality</th>
+      <th>City</th>
 
+
+
+    </tr>
+    <% @doctors.each do |doctor| %>
+      <tr>
+        <td><%= doctor.id %></td>
+        <td><%= doctor.name %></td>
+        <td><%= doctor.speciality.name %></td>
+        <td><%= doctor.city.name %></td>
+        <td class="links">
+          <%= link_to "show","/doctors/#{doctor.id}" %>
+          <%= link_to "Edit","/doctors/edit/#{doctor.id}" %>
+          <%= link_to "Delete","/doctors/destroy/#{doctor.id}" %>
+          <%= link_to "all patients",patients_path(id: doctor.id)%>
+
+        </td>
+      </tr>
+    <% end %>
+
+</table>
+<br>
+<br>
+<div class="links">
+  <%= link_to "Add doctor" ,new_doctor_path %>
+</div>

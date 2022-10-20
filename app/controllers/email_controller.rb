@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 class EmailController < ApplicationController
   before_action :set_patient
 
-  def index
-  end
+  def index; end
 
   def send_mail
     PatientMailer.with(patient: @patient, message: params[:message]).send_message.deliver_now

@@ -1,55 +1,29 @@
-# app/controllers/sessions_controller.rb
+# frozen_string_literal: true
+
 class SessionsController < ApplicationController
+  skip_before_action :authorized, only: %i[new create]
+
+  def new; end
+
   def create
-    @user = User.find_by(name: session_params[:name])
-
-    if @user&.authenticate(session_params[:password])
-      login
-      render json: {
-        logged_in: true,
-        user: @user
-      }
+    user = User.find_by_email(params[:email])
+    if user&.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect_to root_url
     else
-      render json: {
-        status: 401,
-        errors: ['no such user, please try again']
-      }
-    end
-  end
-
-  def logged_in?
-    # code here
-  end
-
-  def current_user
-    # code here
-  end
-
-  def islogged_in?
-    if logged_in? && current_user
-      render json: {
-        logged_in: true,
-        user: current_user
-      }
-    else
-      render json: {
-        logged_in: false,
-        message: 'no such user'
-      }
+      flash.now[:alert] = 'Email or password is invalid'
+      render 'new'
     end
   end
 
   def destroy
-    logout
-    render json: {
-      status: 200,
-      logged_out: true
-    }
+    session[:user_id] = nil
+    redirect_to root_url
   end
 
   private
 
-  def session_params
-    params.require(:user).permit(:name, :email, :password)
+  def authorized
+    # code here
   end
 end

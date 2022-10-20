@@ -1,1 +1,7 @@
 <%= render 'form', doc: @doctor %>
+<%= form_for @doctor do |d| %>
+  Name: <%= d.text_field :name %><br>
+  <br>City: <%= d.text_field :city %><br>
+  <br>Speciality: <%= d.text_field :speciality %><br>
+  <br><%= d.submit%>
+<% end %>

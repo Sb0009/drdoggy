@@ -5,8 +5,6 @@ class CreatePatients < ActiveRecord::Migration[7.0]
     create_table :patients do |t|
       t.string :name
       t.timestamps
-
-
     end
   end
 end

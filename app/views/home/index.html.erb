@@ -1,216 +1,214 @@
-<h2>Home</h2>
-<%= def destroy_user_session_path
-      # code here
-    end
-    link_to('Logout', destroy_user_session_path, method: :delete) %>
-
-
-
-<html>
-
-
-<div class="text-center">
-
-  <h3>
-    Welcome at Dr Doggy APP -Dashboard
-
-  </h3>
-</div>
-
-<!--test-->
 <!DOCTYPE html>
 
 <head>
   <meta charset="utf8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" media="screen" title="no title">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" media="screen" title="no title">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
+        media="screen" title="no title">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/css/bootstrap.min.css"
+        media="screen" title="no title">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/css/mdb.min.css" media="screen" title="no title">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/css/mdb.min.css"
+        media="screen" title="no title">
 
-  <title>New</title>
+
 </head>
+
 <body>
-<div layout:fragment="dashboard-contents">
-  <%= image_tag "start.png" , size: "300X700", :alt => "dr login"%>
 
-  <form method="post" class="form mt-2" th:object="${doctor}"
-        th:action="@{'/partner/doctors/edit/'+${id}}">
+<!--<div class="top-hero-wrapper text-center">-->
+<!--  <div class="container top-hero-container">-->
+<h1 class="text-white">WELCOME</h1>
 
-    <div class="card">
+<h2 class="text-white">DrDoggy is a service to make medical appointment.</h2>
+<div class="row">
+  <div class="col-md-offset-3 col-md-3">
+    <div class="links">
+      <%= link_to "All Specialities" ,specialities_path %><br>
+      <%= link_to "All Doctors" ,doctors_path %><br>
+      <%= link_to "All Patients" ,patients_path %><br>
+      <!--    <%#= link_to "Sign in", sessions_path %><br>-->
+      <%#= link_to "Log in" ,sessions_path %>
+    </div>
 
-      <div class="card-header bg-transparent">
+    <div layout:fragment="dashboard-contents">
 
-        <div style="font-size: 20px;" class="ml-1">Add New Doctor</div>
+      <form method="post" class="form mt-2" th:object="${doctor}"
+            th:action="@{'/partner/doctors/edit/'+${id}}">
 
-        <div class="text-muted">Please fill your doctor information</div>
+        <div class="card">
 
-      </div>
-      <!-- card header -->
+          <div class="card-header bg-warning">
 
-      <div class="card-body">
+            <div style="font-size: 20px;" class="ml-1">Add New Doctor</div>
 
-        <div class="container-fluid">
-
-          <div class="row">
-
-            <div class="col-12 col-md-6">
-
-
-
-              <div class="form-group">
-
-                <label>Enter Doctor's name :</label> <input type="text"
-                                                            placeholder="Name" name="name" class="form-control"
-                                                            th:field="*{name}" />
-              </div>
-
-
-              <div class="column">
-                <label for="gender">Gender:</label>
-                <div
-                  th:each="gender : ${T(com.jdc.clinic.entity.FamilyMember.Gender).values()}">
-                  <input type="radio" th:id="${gender}" th:value="${gender}"
-                         name="gender" th:field="*{gender}" /> <label
-                  th:for="${gender}" th:text="${gender.name()}"></label>
-                </div>
-              </div>
-              <div class="form-group mt-2">
-
-                <label>Enter Doctor's position :</label> <input type="text"
-                                                                placeholder="Position" name="Position" class="form-control"
-                                                                th:field="*{position}" />
-
-              </div>
-
-              <div class="form-group">
-
-                <label>Enter Doctor's license-code :</label> <input type="text"
-                                                                    placeholder="License-Code" name="License-Code"
-                                                                    class="form-control" th:field="*{licenseCode}" />
-
-              </div>
-            </div>
-            <!-- first column -->
-            <div class="col-12 col-md-6">
-              <div class="form-group">
-
-                <label>Select Doctor :</label> <select
-                class="form-control mdb-select md-form" name="doctor"
-                th:field="*{doctor}">
-                <option value="Badyine"> Badyine</option>
-              </select>
-
-              </div>
-
-
-              <div class="form-group">
-
-                <label>Select Speciality :</label> <select
-                class="form-control mdb-select md-form" name="Specialitie"
-                th:field="*{specialities}">
-
-                <option value="" disabled selected>Choose Speciality</option>
-                <option value="Orthopaedic Surgeons">Orthopedic
-                  Surgeons</option>
-                <option value="Uro Surgeons"> Surgeons</option>
-                <option value="Physicians">Physicians</option>
-
-              </select>
-
-              </div>
-
-              <div class="form-group">
-
-                <label>Enter phone </label>
-                <div class="phone-list">
-                  <div class="phone-input">
-                    <input type="tel" placeholder="Phone" name="phone1"
-                           th:field="*{phones}" class="form-control" />
-                  </div>
-                </div>
-                <button type="button"
-                        class="btn mt-1 form-control btn-outline-info btn-add-phone"
-                        style="border-style: dashed;">
-                  <span><i class="far fa-plus"></i></span> Add New
-                </button>
-
-
-              </div>
-              <!-- phone form -->
-
-
-            </div>
-            <!-- second column -->
+            <div class="text-muted">Please enter your doctor information</div>
 
           </div>
-          <!-- row -->
+          <!-- card header -->
 
+          <div class="card-body">
+
+            <div class="container-fluid">
+
+              <div class="row">
+
+                <div class="col-12 col-md-6">
+
+
+
+                  <div class="form-group">
+
+                    <label>Enter Doctor's name :</label> <input type="text" placeholder="Name"
+                                                                name="name" class="form-control" th:field="*{name}" />
+                  </div>
+
+
+                  <div class="column">
+                    <label for="gender">Gender:</label>
+                    <div
+                      th:each="gender : ${T(com.jdc.clinic.entity.FamilyMember.Gender).values()}">
+                      <input type="radio" th:id="${gender}" th:value="${gender}" name="gender"
+                             th:field="*{gender}" /> <label th:for="${gender}"
+                                                            th:text="${gender.name()}"></label>
+                    </div>
+                  </div>
+                  <div class="form-group mt-2">
+
+                    <label>Enter Doctor's position :</label> <input type="text"
+                                                                    placeholder="Position" name="Position" class="form-control"
+                                                                    th:field="*{position}" />
+
+                  </div>
+
+                  <div class="form-group">
+
+                    <label>Enter Doctor's license-code :</label> <input type="text"
+                                                                        placeholder="License-Code" name="License-Code" class="form-control"
+                                                                        th:field="*{licenseCode}" />
+
+                  </div>
+                </div>
+                <!-- first column -->
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+
+                    <label>Select Doctor :</label> <select
+                    class="form-control mdb-select md-form" name="doctor"
+                    th:field="*{doctor}">
+                    <option value="Badyine"> Badyine</option>
+                  </select>
+
+                  </div>
+
+
+                  <div class="form-group">
+
+                    <label>Select Speciality :</label> <select
+                    class="form-control mdb-select md-form" name="Specialitie"
+                    th:field="*{specialities}">
+
+                    <option value="" disabled selected>Choose Speciality</option>
+                    <option value="Orthopaedic Surgeons">Orthopedic
+                      Surgeons</option>
+                    <option value="Uro Surgeons"> Surgeons</option>
+                    <option value="Physicians">Physicians</option>
+
+                  </select>
+
+                  </div>
+
+                  <div class="form-group">
+
+                    <label>Enter phone </label>
+                    <div class="phone-list">
+                      <div class="phone-input">
+                        <input type="tel" placeholder="Phone" name="phone1"
+                               th:field="*{phones}" class="form-control" />
+                      </div>
+                    </div>
+                    <button type="button"
+                            class="btn mt-1 form-control btn-outline-info btn-add-phone"
+                            style="border-style: dashed;">
+                      <span><i class="far fa-plus"></i></span> Add New
+                    </button>
+
+
+                  </div>
+                  <!-- phone form -->
+
+
+                </div>
+                <!-- second column -->
+
+              </div>
+              <!-- row -->
+
+            </div>
+            <!-- container-fluid -->
+
+          </div>
+          <!-- card body -->
+          <div class="form-group">
+
+
+            <div class="card-footer text-right bg-transparent">
+              <a class="btn btn-outline-success " href="#" th:href="@{/partner/doctors/1}"
+                 role="button">Cancel</a>
+              &nbsp;&nbsp;
+              <button class="btn btn-outline-success" type="submit" role="button">Submit</button>
+
+
+            </div>
+
+
+            <!-- card footer -->
+
+          </div>
+          <!-- card -->
         </div>
-        <!-- container-fluid -->
+      </form>
 
-      </div>
-      <!-- card body -->
-      <div class="form-group">
+      <script>
+          $(document.body).on('click', '.btn-remove-phone', function () {
+              $(this).closest('.phone-input').remove();
+          });
 
+          $('.btn-add-phone')
+              .on(
+                  'click',
+                  function () {
+                      var index = $('.phone-input').length + 1;
+                      $('.phone-list')
+                          .append(
+                              ''
+                              + '<div class="container-fluid phone-input">'
+                              + '<div class="row">'
+                              + '<input type="tel" placeholder="Phone" name="phone' + index + '" class="mt-1 col-11 form-control"/>'
+                              + '<button type="button" class="ml-1 btn btn-outline-danger mt-1 btn-remove-phone"><i class="fal fa-times"></i></button>'
+                              + '</div></div>');
+                  });
 
-      <div class="card-footer text-right bg-transparent">
-        <a class="btn btn-outline-success " href="#"
-           th:href="@{/partner/doctors/1}" role="button">Cancel</a>
-        &nbsp;&nbsp;
-        <button class="btn btn-outline-success" type="submit" role="button">Submit</button>
+          $(document.body).on('click', '.btn-remove-email', function () {
+              $(this).closest('.email-input').remove();
+          });
 
-
-      </div>
-
-
-      <!-- card footer -->
+          $('.btn-add-email')
+              .on(
+                  'click',
+                  function () {
+                      var index = $('.email-input').length + 1;
+                      $('.email-list')
+                          .append(
+                              ''
+                              + '<div class="container-fluid email-input">'
+                              + '<div class="row">'
+                              + '<input type="email" placeholder="Email" name="mail' + index + '" class="mt-1 col-11 form-control"/>'
+                              + '<button type="button" class="ml-1 btn btn-outline-danger mt-1 btn-remove-email"><i class="fal fa-times"></i></button>'
+                              + '</div></div>');
+                  });
+      </script>
 
     </div>
-    <!-- card -->
-    </div>
-  </form>
-
-  <script>
-      $(document.body).on('click', '.btn-remove-phone', function() {
-          $(this).closest('.phone-input').remove();
-      });
-
-      $('.btn-add-phone')
-          .on(
-              'click',
-              function() {
-                  var index = $('.phone-input').length + 1;
-                  $('.phone-list')
-                      .append(
-                          ''
-                          + '<div class="container-fluid phone-input">'
-                          + '<div class="row">'
-                          + '<input type="tel" placeholder="Phone" name="phone'+index+'" class="mt-1 col-11 form-control"/>'
-                          + '<button type="button" class="ml-1 btn btn-outline-danger mt-1 btn-remove-phone"><i class="fal fa-times"></i></button>'
-                          + '</div></div>');
-              });
-
-      $(document.body).on('click', '.btn-remove-email', function() {
-          $(this).closest('.email-input').remove();
-      });
-
-      $('.btn-add-email')
-          .on(
-              'click',
-              function() {
-                  var index = $('.email-input').length + 1;
-                  $('.email-list')
-                      .append(
-                          ''
-                          + '<div class="container-fluid email-input">'
-                          + '<div class="row">'
-                          + '<input type="email" placeholder="Email" name="mail'+index+'" class="mt-1 col-11 form-control"/>'
-                          + '<button type="button" class="ml-1 btn btn-outline-danger mt-1 btn-remove-email"><i class="fal fa-times"></i></button>'
-                          + '</div></div>');
-              });
-  </script>
-
-</div>
-
+  </div>
 </body>
-</html>

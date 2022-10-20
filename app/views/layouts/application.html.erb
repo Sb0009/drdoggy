@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
-  <title>DRDOGGY</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DR Doggy the "Pain KIlla"</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-
 <body>
-<h1>DR DOGGY</h1>
-<%= alert %>
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <a class="nav-link" href="/ideas">Ideas</a>
+  </li>
+  ...
+</ul>
+<p class="navbar-text float-right">
+  <% def new_user_session_path
+       # code here
+     end
+     def new_user_registration_path
+       # code here
+     end
+     def edit_user_registration_path
+       # code here
+     end
+     def user_signed_in?
+       # code here
+     end
+     def destroy_user_session_path
+       # code here
+     end
+     if user_signed_in? %>
+    Logged in as <strong><%= user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  <% end %>
+</p>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
 <%= yield %>
+
 </body>
 </html>

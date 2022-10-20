@@ -4,6 +4,10 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+end
 
 # Bootstrap https://rubygems.org/gems/bootstrap
 gem 'bootstrap', '~> 4.2', '>= 4.2.1'
@@ -55,7 +59,7 @@ gem 'jbuilder'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # Use Sass to process CSS
-gem "sassc-rails", "~> 2.1"
+gem 'sassc-rails', '~> 2.1'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'image_processing', '~> 1.12'
@@ -73,11 +77,11 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem 'web-console'
   gem 'faker'
+  gem 'web-console'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  gem 'rack-mini-profiler'
   gem 'email_validator'
+  gem 'rack-mini-profiler'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end

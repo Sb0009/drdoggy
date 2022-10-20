@@ -1,62 +1,57 @@
+# frozen_string_literal: true
+
 class DoctorsController < ApplicationController
-  before_action :set_doctor, only: [ :show, :edit, :update, :destroy ]
-
-  # GET /doctors
-  def index
-    @doctors = Doctor.all
-  end
-
-  # GET /doctors/1
-  def show
-    #@doctor = Doctor.find(params[:id])
-  end
-
-  # GET /doctors/new
+  before_action :authenticate_user!
   def new
     @doctor = Doctor.new
   end
 
-  # GET /doctors/1/edit
+  def index
+    @doctors = Doctor.all
+  end
+
+  def show
+    @doctor = Doctor.all
+  end
+
   def edit
+    @doctor = Doctor.find(params[:id])
   end
 
   def create
-    @doctor = Doctor.new(doctor_params)
+    doctor = Doctor.new
+    doctor.name = params[:doctor][:name]
 
-    if @doctor.save
-      redirect_to @doctor, notice: "dr created."
-    else
-      render :new, status: :unprocessable_entity
-    end
+    doctor.speciality = params[:doctor][:speciality
+    ]
+    doctor.save
+    redirect_to doctors_path
   end
 
-  # PATCH/PUT /doctors/1
   def update
-    if @doctor.update(doctor_params)
-      redirect_to @doctor, notice: "Doc updated."
+    @doctor = Doctor.find(params[:id])
+    if @doctor.update(name: params[:doctor][:name], city:
+      params[:doctor][:city])
+      redirect_to doctors_path
     else
-      render :edit, status: :unprocessable_entity
+      render 'edit'
     end
   end
 
-  # DELETE /docs/1 or /docs/1.json
   def destroy
+    @doctor = Doctor.find(params[:id])
     @doctor.destroy
-    redirect_to doctors_url, notice: "bye bye"
+    redirect_to doctors_path
+  end
+
+  def disable
+    doctor = Doctor.find_by(id: params[:id])
+    redirect_to doctors_path if doctor.update(status: false)
   end
 
   private
 
-  def set_doctor
+  def authenticate_user!
     # code here
-  end
-
-  private
-
-
-
-
-  def doctor_params
-    params.require(:doctor).permit(:name, :email,  :specialty_id)
   end
 end

@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class CitiesController < ApplicationController
-  before_action :set_city, only: %i[ show edit update destroy ]
-  before_action :adminAuthorized
+  before_action :set_city, only: %i[show edit update destroy]
+  before_action :admin_authorized
 
   # GET /cities or /cities.json
   def index
@@ -8,8 +10,7 @@ class CitiesController < ApplicationController
   end
 
   # GET /cities/1 or /cities/1.json
-  def show
-  end
+  def show; end
 
   # GET /cities/new
   def new
@@ -17,8 +18,7 @@ class CitiesController < ApplicationController
   end
 
   # GET /cities/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /cities or /cities.json
   def city_url(city)
@@ -30,7 +30,7 @@ class CitiesController < ApplicationController
 
     respond_to do |format|
       if @city.save
-        format.html { redirect_to city_url(@city), notice: "City was successfully created." }
+        format.html { redirect_to city_url(@city), notice: 'City was successfully created.' }
         format.json { render :show, status: :created, location: @city }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -43,7 +43,7 @@ class CitiesController < ApplicationController
   def update
     respond_to do |format|
       if @city.update(city_params)
-        format.html { redirect_to city_url(@city), notice: "City was successfully updated." }
+        format.html { redirect_to city_url(@city), notice: 'City was successfully updated.' }
         format.json { render :show, status: :ok, location: @city }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -57,12 +57,17 @@ class CitiesController < ApplicationController
     @city.destroy
 
     respond_to do |format|
-      format.html { redirect_to cities_url, notice: "City was successfully destroyed." }
+      format.html { redirect_to cities_url, notice: 'City was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
+
+  def admin_authorized
+    # code here
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_city
     @city = City.find(params[:id])
@@ -70,6 +75,6 @@ class CitiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def city_params
-    params.require(:city).permit( :name)
+    params.require(:city).permit(:name)
   end
 end
