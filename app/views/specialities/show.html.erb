@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b><%=Speciality.human_attribute_name(:name)%>:</b>
+  <%= @speciality.name %>
+</p>
+<p>
+  <b><%=Speciality.human_attribute_name(:doctor)%>:</b>
+  <%= @speciality.doctors %>
+</p>
+<p>
+  <b><%=Speciality.human_attribute_name(:doctor_id)%>:</b>
+  <%= @speciality.doctors.name %>
+</p>
+
+
+<%= link_to 'Spec', edit_speciality_path(@speciality) %> |
+<%= link_to 'list', specialities_path %>
