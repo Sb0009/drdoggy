@@ -1,5 +1,5 @@
 class City < ApplicationRecord
-  belongs_to :patient
-  validates :name, presence: true, uniqueness: true
-
+  has_many :doctors
+	has_many :patients
+	has_many :appointments
 end
