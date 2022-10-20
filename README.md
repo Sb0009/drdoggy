@@ -43,7 +43,7 @@ Patients
 
 
 
-## Endpoints : /api/v1/
+## Endpoints :
 
 | Method | End point    | Public | Action                                 |
 |--------|--------------|--------|----------------------------------------|
