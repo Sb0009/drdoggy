@@ -53,9 +53,9 @@ Patients
 | DELETE | doctor/:id   | False  | Admin destroy doctor's details         |
 | GET    | doctor       | False  | Fetch all doctor                       |
 | GET    | doctor/:id   | False  | Fetch a specific doctor                |
-| POST   | appointments | False  | scheduling an appointment              |
-| GET    | appointments | False  | Fetch appointments for a specific user |
-| GET    | appointments | False  | Admin fetches all appointments         |
+| POST   | appointments | False  | scheduling an appointment      NO      |
+| GET    | appointments | False  | Fetch appointments for  NO             |
+| GET    | appointments | False  | Admin fetches all appointments  NO     |
 
 ## Deployment 🧧 
 
