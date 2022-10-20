@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'doctors/index'
   get 'doctors/show'
   get 'cities/show'
+  
 
   post '/submit' => 'doctors#submit'
   post '/submit' => 'admin/doctors#submit'
@@ -11,10 +12,13 @@ Rails.application.routes.draw do
 
   get '/email/:id/', to: "email#index", as: "email"
   post '/email/:id/', to: "email#send_mail", as: "send_email"
+  
   root 'home#index'
   resources :doctors
   resources :patients
   resources :cities
+   resources :specialites
+  
   devise_for :patients
   devise_for :doctors
   devise_for :users
