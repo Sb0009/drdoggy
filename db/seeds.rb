@@ -7,7 +7,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first)
+d1 = Doctor.create(name: 'John', email: 'cardio@gmail.com', location: 'Paris')
+d2 = Doctor.create(name: 'Houssem', email: 'the Boss.com', location: 'Hybride')
 
+p1 = Patient.create(name: 'Dan', location: 'NYC', email: 'dan@gmail.com', condition: 'loves cookies so much')
+p2 = Patient.create(name: 'Luke', location: 'Paris', email: '', condition: 'Stop smoking ')
+
+a1 = Appointment.create(patient: p2, doctor: d1, appointment_time: DateTime.now)
+a2 = Appointment.create(patient: p1, doctor: d2, appointment_time: DateTime.now)
+a3 = Appointment.create(patient: p2, doctor: d1, appointment_time: DateTime.now)
+a4 = Appointment.create(patient: p1, doctor: d2, appointment_time: DateTime.now)
+a5 = Appointment.create(patient: p2, doctor: d1, appointment_time: DateTime.now)
 require 'faker'
 Doctor.destroy_all
 # City.destroy_all

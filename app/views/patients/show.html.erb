@@ -1,19 +1,20 @@
-<!--<p id="notice"><%#= notice %></p>-->
+<h1><%= @patient.name %></h1>
+<p><%= @patient.condition %> <%= link_to "Edit condition", edit_patient_path(@patient.id) %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @patient.name %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @patient.email %>
-</p>
-
-<p>
-  <strong>Birthdate:</strong>
-  <%= @patient.dob %>
-</p>
+<ol>
+  <% @patient.appointments.each do |appt| %>
+    <li>
+      <%= appt.doctor.name %> - <%= appt.appointment_time %>
+      <%= def appointment_path(i)
+              # code here
+          end
+          form_tag appointment_path(appt.id), method: :delete do %>
+        <%= submit_tag "Delete appointment" %>
+      <% end %>
+    </li>
+  <% end %>
+</ol>
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>

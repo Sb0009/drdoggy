@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Rails7">
 <head>
   <title>Admin Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" media="screen" title="no title">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" media="screen" title="no title">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/css/mdb.min.css" media="screen" title="no title">
   <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src='js/app.js'></script>
+
 </head>
-<body class="account register" style="background:#232323;">
-<div align="center" id="page" style="width: 635px;height: 347px;">
+
+<!--Navigation & Intro-->
+
+
+<body ng-controller="account register" style="background:#232323;">
+<div id="page" style="width: 635px;height: 347px;">
   <div id="session_content" style="padding: 4px;">
     <div style="background-color: #EEEEEE;width: 523px;height: 213px;margin-top:12px;">
       <% flash.each do |key, value| %>
         <div class="flash <%= key %>" style="color :red;position: absolute;margin: 12px 173px;"> Invalid Username or password. </div>
       <% end %>
-      <div class="flash" style="color :#2A6C86;float: left;margin-top:15px;margin-left:12px;"><%= image_tag("/assets/admin panel txt.png",:width => "135",:height => "14")%></div><br /><br />
-      <%= form_for resource, :as => resource_name, :url => admin_session_path ,:remote => true do |f| %>
-        <table cellspacing="0px" cellpadding="4px" width="88%" style="margin-left:37px;">
+      <div class="flash" style="color :#2A6C86;float: left;margin-top:15px;margin-left:12px;"><%= image_tag("login.png",:width => "135",:height => "14")%></div><br /><br />
+      <%= def admin_session_path
+            # code here
+          end
+          form_for resource, as: resource_name, :url => admin_session_path , :remote => true do |f| %>
+        <table marging="5" padding="4px" size="88%" style="margin-left:37px;">
           <tr>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td valign="top"><%= f.label :email, "Email:" %></td>
+            <td><%= f.label :email, "Email:" %></td>
             <td><%= f.email_field :email  %></td>
           </tr>
           <tr>
@@ -46,7 +65,7 @@
     input[type=text], input[type=password], input[type=email], textarea {
         background-image: url("login.png");
         color: rgb(65, 65, 65);
-        font-size: 14px;
+        font-size: 3rem;
         height: 23px;
         width: 257px;
         border: none;

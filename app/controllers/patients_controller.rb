@@ -1,37 +1,27 @@
 # frozen_string_literal: true
 
 class PatientsController < ApplicationController
-  def new
-    @patient = Patient.new
-  end
-
   def index
-    if params[:id]
-      doctor = Doctor.find(params[:id])
-      @patients = doctor.patients
-    else
-      @patients = Patient.all
-    end
+    @patients = Patient.all
   end
 
   def show
     @patient = Patient.find(params[:id])
   end
 
-  def create
-    patient = Patient.new
-    patient.name = params[:patient][:name]
-    patient.age = params[:patient][:age]
-    patient.address = params[:patient][:address]
-    patient.gender = params[:patient][:gender]
-    patient.save
-    redirect_to '/patients'
+  def new
+    patient = Patient.create(name: params[:name], email: params[:email], location: params[:location],
+                             condition: params[:condition])
+    # redirect_to patients_path go to index
+    redirect_to patient_path(patient.id) # go to show
+    # display new patient form
   end
 
-  def destroy
-    @patient = Patient.find(params[:id])
-    @patient.destroy
-    redirect_to '/patients'
+  def create
+    patient = Patient.create(name: params[:name], email: params[:email], location: params[:location],
+                             condition: params[:condition])
+    # redirect_to patients_path go to index
+    redirect_to patient_path(patient.id) # go to show
   end
 
   def edit
@@ -39,11 +29,9 @@ class PatientsController < ApplicationController
   end
 
   def update
-    @patient = Patient.find(params[:id])
-    if @patient.update(name: params[:patient][:name], age: params[:patient][:age],
-                       address: params[:patient][:address],
-                       gender: params[:patient][:gender])
-      redirect_to '/patients'
-    end
+    patient = Patient.find(params[:id])
+    patient.update(condition: params[:condition])
+    # redirect_to patients_path go to index
+    redirect_to patient_path(patient.id) # go to show
   end
 end

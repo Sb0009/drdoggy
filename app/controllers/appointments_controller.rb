@@ -22,11 +22,12 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.find(params[:id])
   end
 
-  def destroy
-    @appointment = Appointment.find(params[:id])
-    redirect_to '/appointments' if @appointment.destroy
-  end
 
+    def destroy
+      appointment = Appointment.destroy(params[:id])
+      redirect_to patient_path(appointment.patient.id)
+    end
+  end
   def update
     appointment = Appointment.find(params[:id])
     if appointment.update(doctor_id: params[:appointment][:doctor_id],

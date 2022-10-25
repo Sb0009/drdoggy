@@ -27,23 +27,18 @@
       <%= link_to "All Specialities" ,specialities_path %><br>
       <%= link_to "All Doctors" ,doctors_path %><br>
       <%= link_to "All Patients" ,patients_path %><br>
-      <!--    <%#= link_to "Sign in", sessions_path %><br>-->
+       <%#= link_to "Sign in", sessions_path %><br>
       <%#= link_to "Log in" ,sessions_path %>
     </div>
 
     <div layout:fragment="dashboard-contents">
-
       <form method="post" class="form mt-2" th:object="${doctor}"
             th:action="@{'/partner/doctors/edit/'+${id}}">
 
         <div class="card">
-
           <div class="card-header bg-warning">
-
             <div style="font-size: 20px;" class="ml-1">Add New Doctor</div>
-
             <div class="text-muted">Please enter your doctor information</div>
-
           </div>
           <!-- card header -->
 
@@ -52,18 +47,11 @@
             <div class="container-fluid">
 
               <div class="row">
-
                 <div class="col-12 col-md-6">
-
-
-
                   <div class="form-group">
-
                     <label>Enter Doctor's name :</label> <input type="text" placeholder="Name"
                                                                 name="name" class="form-control" th:field="*{name}" />
                   </div>
-
-
                   <div class="column">
                     <label for="gender">Gender:</label>
                     <div
@@ -104,11 +92,11 @@
 
                   <div class="form-group">
 
-                    <label>Select Speciality :</label> <select
+                    <label>Select Specialty :</label> <select
                     class="form-control mdb-select md-form" name="Specialitie"
                     th:field="*{specialities}">
 
-                    <option value="" disabled selected>Choose Speciality</option>
+                    <option value="" disabled selected>Choose Specialty</option>
                     <option value="Orthopaedic Surgeons">Orthopedic
                       Surgeons</option>
                     <option value="Uro Surgeons"> Surgeons</option>
@@ -132,38 +120,22 @@
                             style="border-style: dashed;">
                       <span><i class="far fa-plus"></i></span> Add New
                     </button>
-
-
                   </div>
                   <!-- phone form -->
-
-
                 </div>
                 <!-- second column -->
-
               </div>
               <!-- row -->
-
             </div>
             <!-- container-fluid -->
-
           </div>
           <!-- card body -->
           <div class="form-group">
-
-
             <div class="card-footer text-right bg-transparent">
-              <a class="btn btn-outline-success " href="#" th:href="@{/partner/doctors/1}"
+              <a class="btn btn-outline-success " href="#" th:href="@{/doctors/1}"
                  role="button">Cancel</a>
-              &nbsp;&nbsp;
-              <button class="btn btn-outline-success" type="submit" role="button">Submit</button>
-
-
+              &nbsp;&nbsp;<button class="btn btn-outline-success"  href="#" th:href="@{/doctors/show}"type="submit" role="button">Submit</button>
             </div>
-
-
-            <!-- card footer -->
-
           </div>
           <!-- card -->
         </div>
@@ -210,5 +182,19 @@
       </script>
 
     </div>
+    <style>
+        body
+        {
+        color: black;
+        background-color: #999999;
+        font-family: 'Raleway', sans-serif;
+         }
+
+        a {
+            background: #29B6F6;
+            color: #fff;
+        }
+
+    </style>
   </div>
 </body>

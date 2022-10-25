@@ -1,9 +1,19 @@
 <h1>Enter Form Patient</h1>
 
 
-<%= link_to 'Back', patients_path %>
+<%= link_to 'Back to patients list', patients_path %>
 <h2>Add new Patient</h2>
-<%= link_to 'Submit', patients_path %>
+ <form method="post" action="/patients">
+  <label for="name">Name</label>
+   <label>
+     <input name="name" value="">
+   </label>
+   <label for="city">Condition</label>
+   <label>
+     <input name="city" value="">
+   </label>
+   <input type="submit" value="Create patient">
+</form>
 <br><br/>
 <%form_for @patient do |p| %>
   Name: <%= :name %><br><br>
@@ -11,4 +21,55 @@
   City: <%= :city%><br><br>
   Phone: <%= :phone %><br><br>
   <br><%= p.submit%>
+
 <% end %>
+<%= form_tag patients_path, method: :patch do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+  <%= label_tag :condition %>
+  <%= text_field_tag :condition %>
+  <%= submit_tag "Create patient" %>
+<% end %>
+
+
+<style>
+
+
+
+
+
+
+  body {
+      color: black;
+      background-color: #999999;
+      font-family: 'Raleway', sans-serif;
+  }
+
+  body.rails_admin .form-horizontal textarea {
+      width: 100%;
+  }
+
+  body.rails_admin .sidebar-nav .dropdown-header {
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      font-weight: normal;
+      text-transform: inherit;
+      cursor: pointer;
+  }
+
+  &::after {
+       content: "\f138";
+       position: absolute;
+       right: 15px;
+       color: #fff;
+       font-family: 'FontAwesome', sans-serif;
+   }
+  }
+
+  a {
+      background: #29B6F6;
+      color: #fff;
+  }
+</style>

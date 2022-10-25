@@ -21,6 +21,7 @@ class DoctorsController < ApplicationController
   def create
     doctor = Doctor.new
     doctor.name = params[:doctor][:name]
+    doctor.location = params[:doctor][:location]
 
     doctor.speciality = params[:doctor][:speciality
     ]
@@ -31,7 +32,7 @@ class DoctorsController < ApplicationController
   def update
     @doctor = Doctor.find(params[:id])
     if @doctor.update(name: params[:doctor][:name], city:
-      params[:doctor][:city])
+      params[:doctor][:location])
       redirect_to doctors_path
     else
       render 'edit'

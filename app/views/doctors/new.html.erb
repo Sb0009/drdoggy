@@ -1,4 +1,10 @@
-
+<%= form_tag doctors_path, method: :patch do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+  <%= label_tag :condition %>
+  <%= text_field_tag :condition %>
+  <%= submit_tag "Create doctor" %>
+<% end %>
 <div class="top-hero-wrapper text-center">
   <div class="container top-hero-container">
     <div class="row">

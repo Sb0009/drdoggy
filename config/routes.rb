@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :doctors, :patients, :specialities, :cities, :home
 
-
   # You can have the root of your site routed with "root"
   root 'home#index'
 
