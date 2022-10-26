@@ -53,17 +53,13 @@ Patients
 | POST   | doctor       | False  | Admin creates doctor                   |
 | PATCH  | doctor/:id   | False  | Admin edits doctor's details           |
 | DELETE | doctor/:id   | False  | Admin destroy doctor's details         |
-| GET    | doctor       | False  | Fetch all doctor                       |
-| GET    | doctor/:id   | False  | Fetch a specific doctor                |
-| POST   | appointments | False  | scheduling an appointment      NO      |
-| GET    | appointments | False  | Fetch appointments for  NO             |
-| GET    | appointments | False  | Admin fetches all appointments  NO     |
+| GET    | doctor       | False  | Fetch all doctor                       |   
 
 ## Deployment 🧧 
 
 [Backend APIs Live Link](https://drdoggy.herokuapp.com/)
 
-[Frontend Live Link](https://sb0009.github.io/)
+[Frontend Live Link](https://sb0009.github.io/drdoggy/)
 
 ## Getting Started
 
