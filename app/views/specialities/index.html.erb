@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DrDoggy *list specialty*</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
+        media="screen" title="no title">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/css/bootstrap.min.css"
+        media="screen" title="no title">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/css/mdb.min.css"
+</head>
+
+<body>
+<h1>Sort by Specialty</h1>
+<%#= all the specialities here %>
+<!--<p id="notice"><%#= notice %></p>-->
+
+<p>
+  <b><%=Specialty.human_attribute_name(:name)%>:</b>
+  <%= @specialty %>
+</p>
+<p>
+  <b><%=Specialty.human_attribute_name(:doctor)%>:</b>
+  <%= @specialty%>
+</p>
+<!--<p>-->
+<!--  <b><%#=Specialty.human_attribute_name(:doctor_id)%>:</b>-->
+  <%#= @specialty %>
+<!--</p>-->
+
+
+<%= def edit_specialty_path(specialty)
+      # code here
+    end
+    link_to 'Edit Spec', edit_specialty_path(@specialty) %> |
+<%= link_to 'list', specialities_path %>
+
+<div class="form-group">-->
+
+  <label>Select Specialty :</label> <label>
+  <select class="form-control mdb-select md-form" name="Specialty" th:field="*{specialities}">
+
+  <option value="" disabled selected>Choose by Specialty</option>
+  <option value="Orthopaedic Surgeons">Orthopedic
+    Surgeons</option>
+  <option value="Uro Surgeons"> Surgeons</option>
+  <option value="Physicians">Physicians</option>
+
+</select>
+</label>
+
+</div>
+
+<button type="button"
+        class="btn mt-1 form-control btn-info btn-add-phone"
+        style="border-style: dashed;">
+  <span><i class=""></i></span> Add New
+</button>
+</div>
+<!-- phone form -->
+</div>
+<!-- second column -->
+</div>
+<!-- row -->
+</div>
+<!-- container-fluid -->
+</div>
+<!-- card body -->
+<div class="form-group">
+  <div class="card-footer text-right bg-transparent">
+    <a class="btn btn-outline-success " href="#" th:href="@{/doctors/1}"
+       role="button">Cancel</a>
+    &nbsp;&nbsp;<button class="btn btn-outline-success"
+                        href="#"
+                        th:href="@{/doctors/show}"
+                        type="submit"
+                        role="button">Submit
+  </button>
+  </div>
+</div>
+<!-- card -->
+</div>
+</form>
+
+<script>
+    $(document.body).on('click', '.btn-remove-phone', function () {
+        $(this).closest('.phone-input').remove();
+    });
+
+    $('.btn-add-phone')
+        .on(
+            'click',
+            function () {
+                let index = $('.phone-input').length + 1;
+                $('.phone-list')
+                    .append(
+                        ''
+                        + '<div class="container-fluid phone-input">'
+                        + '<div class="row">'
+                        + '<input type="tel" placeholder="Phone" name="phone' + index + '" class="mt-1 col-11 form-control"/>'
+                        + '<button type="button" class="ml-1 btn btn-outline-danger mt-1 btn-remove-phone"><i class="fal fa-times"></i></button>'
+                        + '</div></div>');
+            });
+
+    $(document.body).on('click', '.btn-remove-email', function () {
+        $(this).closest('.email-input').remove();
+    });
+
+    $('.btn-add-email')
+        .on(
+            'click',
+            function () {
+                let index = $('.email-input').length + 1;
+                $('.email-list')
+                    .append(
+                        ''
+                        + '<div class="container-fluid email-input">'
+                        + '<div class="row">'
+                        + '<input type="email" placeholder="Email" name="mail' + index + '" class="mt-1 col-11 form-control"/>'
+                        + '<button type="button" class="ml-1 btn btn-outline-danger mt-1 btn-remove-email"><i class="fal fa-times"></i></button>'
+                        + '</div></div>');
+            });
+</script>
+
+</div>
+<style>
+
+
+
+</style>
+</body>
+</html>
