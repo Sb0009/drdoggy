@@ -59,7 +59,7 @@ Patients
 
 [Backend APIs Live Link](https://drdoggy.herokuapp.com/)
 
-[Frontend Live Link](https://sb0009.github.io/drdoggy/)
+[Frontend Live Link](https://sb0009.github.io/)
 
 ## Getting Started
 
