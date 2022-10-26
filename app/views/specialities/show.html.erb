@@ -1,18 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b><%=Speciality.human_attribute_name(:name)%>:</b>
-  <%= @speciality.name %>
+  <b><%=Specialty.human_attribute_name(:name)%>:</b>
+  <%= @specialty.name %>
 </p>
 <p>
-  <b><%=Speciality.human_attribute_name(:doctor)%>:</b>
-  <%= @speciality.doctors %>
+  <b><%=Specialty.human_attribute_name(:doctor)%>:</b>
+  <%= @specialty.doctors %>
 </p>
 <p>
-  <b><%=Speciality.human_attribute_name(:doctor_id)%>:</b>
-  <%= @speciality.doctors.name %>
+  <b><%=Specialty.human_attribute_name(:doctor_id)%>:</b>
+  <%= @specialty.doctors.name %>
 </p>
 
 
-<%= link_to 'Spec', edit_speciality_path(@speciality) %> |
+<%= def edit_specialty_path(specialty)
+      # code here
+    end
+    link_to 'Spec', edit_specialty_path(@specialty) %> |
 <%= link_to 'list', specialities_path %>
+
+<button type="button"
+        class="btn mt-1 form-control btn-outline-info btn-add-phone"
+        style="border-style: dashed;">
+  <span><i class="far fa-plus"></i></span> Add New
+</button>

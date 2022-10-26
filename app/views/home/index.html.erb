@@ -16,27 +16,38 @@
 
 <body>
 
-<!--<div class="top-hero-wrapper text-center">-->
-<!--  <div class="container top-hero-container">-->
-<h1 class="text-white">WELCOME</h1>
+<div class="card-header bg-white">
+  <div class="text-muted">DrDoggy</div>
+  <%= link_to 'Sign up to Dr Doggy', '/sessions/new', class: 'btn btn-block btn-white' %>
+</div>
+<div class="col-md-3">
+  <%= link_to 'Member?', '/login',class:  'btn btn-block btn-white' %>
+</div>
+<div class="col-md-3">
+  <%= link_to 'Exit', 'sessions/destroy',class:  'btn btn-block btn-white' %>
 
-<h2 class="text-white">DrDoggy is a service to make medical appointment.</h2>
-<div class="row">
-  <div class="col-md-offset-3 col-md-3">
-    <div class="links">
-      <%= link_to "All Specialities" ,specialities_path %><br>
-      <%= link_to "All Doctors" ,doctors_path %><br>
-      <%= link_to "All Patients" ,patients_path %><br>
-       <%#= link_to "Sign in", sessions_path %><br>
-      <%#= link_to "Log in" ,sessions_path %>
+</div>
+<div class="top-hero-wrapper text-center">
+  <div class="container top-hero-container">
+    <h1 class="text-white">WELCOME</h1>
+
+    <h2 class="text-white">DrDoggy is a service to make medical appointment (soon).</h2>
+    <div class="row">
+      <div class="col-md-offset-3 col-md-3">
+        <div class="links">
+          <%= link_to "All Specialities" ,specialities_path %><br>
+          <%= link_to "All Doctors" ,doctors_path %><br>
+          <%= link_to "All Patients" ,patients_path %><br>
+          <%#= link_to "Sign in" , sessions_path %><br>
+          <%#= link_to "Log in" ,sessions_path %>
+        </div>
+      </div>
     </div>
-
     <div layout:fragment="dashboard-contents">
       <form method="post" class="form mt-2" th:object="${doctor}"
             th:action="@{'/partner/doctors/edit/'+${id}}">
-
         <div class="card">
-          <div class="card-header bg-warning">
+          <div class="card-header bg-white">
             <div style="font-size: 20px;" class="ml-1">Add New Doctor</div>
             <div class="text-muted">Please enter your doctor information</div>
           </div>
@@ -53,61 +64,24 @@
                                                                 name="name" class="form-control" th:field="*{name}" />
                   </div>
                   <div class="column">
-                    <label for="gender">Gender:</label>
-                    <div
-                      th:each="gender : ${T(com.jdc.clinic.entity.FamilyMember.Gender).values()}">
-                      <input type="radio" th:id="${gender}" th:value="${gender}" name="gender"
-                             th:field="*{gender}" /> <label th:for="${gender}"
-                                                            th:text="${gender.name()}"></label>
-                    </div>
                   </div>
                   <div class="form-group mt-2">
 
-                    <label>Enter Doctor's position :</label> <input type="text"
-                                                                    placeholder="Position" name="Position" class="form-control"
-                                                                    th:field="*{position}" />
-
-                  </div>
-
-                  <div class="form-group">
-
-                    <label>Enter Doctor's license-code :</label> <input type="text"
-                                                                        placeholder="License-Code" name="License-Code" class="form-control"
-                                                                        th:field="*{licenseCode}" />
-
+                    <label>Enter Doctor's location:</label> <input type="text"
+                                                                   placeholder="Location" name="Location" class="form-control"
+                                                                   th:field="*{location}" />
                   </div>
                 </div>
                 <!-- first column -->
                 <div class="col-12 col-md-6">
                   <div class="form-group">
-
                     <label>Select Doctor :</label> <select
                     class="form-control mdb-select md-form" name="doctor"
                     th:field="*{doctor}">
-                    <option value="Badyine"> Badyine</option>
+                    <option value="Badyine"> Betty</option>
                   </select>
-
                   </div>
-
-
                   <div class="form-group">
-
-                    <label>Select Specialty :</label> <select
-                    class="form-control mdb-select md-form" name="Specialitie"
-                    th:field="*{specialities}">
-
-                    <option value="" disabled selected>Choose Specialty</option>
-                    <option value="Orthopaedic Surgeons">Orthopedic
-                      Surgeons</option>
-                    <option value="Uro Surgeons"> Surgeons</option>
-                    <option value="Physicians">Physicians</option>
-
-                  </select>
-
-                  </div>
-
-                  <div class="form-group">
-
                     <label>Enter phone </label>
                     <div class="phone-list">
                       <div class="phone-input">
@@ -115,13 +89,8 @@
                                th:field="*{phones}" class="form-control" />
                       </div>
                     </div>
-                    <button type="button"
-                            class="btn mt-1 form-control btn-outline-info btn-add-phone"
-                            style="border-style: dashed;">
-                      <span><i class="far fa-plus"></i></span> Add New
-                    </button>
                   </div>
-                  <!-- phone form -->
+
                 </div>
                 <!-- second column -->
               </div>
@@ -134,7 +103,8 @@
             <div class="card-footer text-right bg-transparent">
               <a class="btn btn-outline-success " href="#" th:href="@{/doctors/1}"
                  role="button">Cancel</a>
-              &nbsp;&nbsp;<button class="btn btn-outline-success"  href="#" th:href="@{/doctors/show}"type="submit" role="button">Submit</button>
+              &nbsp;&nbsp;<button class="btn btn-outline-success" href="#" th:href="@{/doctors/show}"
+                                  type="submit" role="button">Submit</button>
             </div>
           </div>
           <!-- card -->
@@ -182,19 +152,10 @@
       </script>
 
     </div>
-    <style>
-        body
-        {
-        color: black;
-        background-color: #999999;
-        font-family: 'Raleway', sans-serif;
-         }
 
-        a {
-            background: #29B6F6;
-            color: #fff;
-        }
 
-    </style>
-  </div>
+
+
+
+
 </body>

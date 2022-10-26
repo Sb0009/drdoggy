@@ -1,66 +1,47 @@
-<table size="50%" padding="3" bordercolor="green">
-  <caption><br>Doctor Details<br></caption>
+
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
+        media="screen" title="no title">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/css/bootstrap.min.css"
+        media="screen" title="no title">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/css/mdb.min.css"
+        media="screen" title="no title">
+  <title>DrDoggy </title>
+
+</head>
+  <div layout:fragment="dashboard-contents">
+    <form method="post" class="form mt-2" th:object="${doctor}"
+          th:action="@{'/partner/doctors/edit/'+${id}}">
+      <div class="card">
+        <div class="card-header bg-white">
+          <div class="text-muted">DrDoggy</div>
+        </div>
+        <!-- card header -->
+
+
+
+<div class="top-hero-wrapper text-center">
+  <div class="container top-hero-container">
+    <h1 class="text-white">All Doctors member at DrDoggy</h1>
+    <table size="50%" padding="3" bordercolor="green">
+      <caption><br>Doctor Details<br></caption>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Specialty</th>
+        <th>City</th>
+        <table size="50%" padding="3" bordercolor="green">
+  <caption><br>Doctors Details<br></caption>
     <tr>
       <th>ID</th>
       <th>Name</th>
       <th>Specialty</th>
-      <th>City</th>
-
-
-<!--      style -->
-      <style>
-        body{background: #FFFFC0
-        }
-          table
-          {
-          -webkit-border-horizontal-spacing: 0px;
-          -webkit-border-vertical-spacing: 0px;
-          background-color: rgba(0, 0, 0, 0);
-          border: 1px solid rgb(84, 159, 137);
-          border-collapse: collapse;
-          box-sizing: border-box;
-          max-width: 100%;
-          width: 100%;
-      }
-
-      tr
-      {
-          border-collapse: collapse;
-      }
-
-      th {
-          padding: 6px;
-          border-bottom: 2px solid rgb(221, 221, 221);
-          border-collapse: collapse;
-          border-left: 1px solid rgb(221, 221, 221);
-          border-right: 1px solid rgb(221, 221, 221);
-          border-top: 0px none rgb(51, 51, 51);
-          box-sizing: border-box;
-          text-align: left;
-      }
-
-      td {
-          padding: 6px;
-          vertical-align: top;
-          width: 14%;
-
-          border: 1px solid #ddd;
-          border-top-color: rgb(221, 221, 221);
-          border-top-style: solid;
-          border-top-width: 1px;
-          border-right-color: rgb(221, 221, 221);
-          border-right-style: solid;
-          border-right-width: 1px;
-          border-bottom-color: rgb(221, 221, 221);
-          border-bottom-style: solid;
-          border-bottom-width: 1px;
-          border-left-color: rgb(221, 221, 221);
-          border-left-style: solid;
-          border-left-width: 1px;
-      }</style>
-
-
-    </tr>
+      <th>City</th></tr>
     <% @doctors.each do |doctor| %>
       <tr>
         <td><%= doctor.id %></td>
@@ -81,5 +62,5 @@
 <br>
 <br>
 <div class="links">
-  <%= link_to "Add doctor" ,new_doctor_path %>
+  <%= link_to "Back Home" ,home_index_path %>
 </div>

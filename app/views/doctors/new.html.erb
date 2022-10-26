@@ -1,3 +1,5 @@
+
+    <h1 class="text-white">Hello Doc </h1>
 <%= form_tag doctors_path, method: :patch do %>
   <%= label_tag :name %>
   <%= text_field_tag :name %>
@@ -5,23 +7,23 @@
   <%= text_field_tag :condition %>
   <%= submit_tag "Create doctor" %>
 <% end %>
-<div class="top-hero-wrapper text-center">
-  <div class="container top-hero-container">
+<!--<div class="top-hero-wrapper text-center">-->
+<!--  <div class="container top-hero-container">-->
     <div class="row">
       <div class="col-md-offset-3 col-md-3">
-        <%= link_to 'Sign up', '/users/new', class: 'btn btn-block btn-white' %>
+        <%= link_to 'Sign up', '/sessions/new', class: 'btn btn-block btn-white' %>
       </div>
       <div class="col-md-3">
         <%= link_to 'Log in', '/login',class:  'btn btn-block btn-white' %>
       </div>
       <div class="col-md-3">
-        <%= link_to 'Log out', '/destroy_session',class:  'btn btn-block btn-white' %>
-      </div>
-    </div>
-  </div>
-</div>
-<%= render 'form', doc: @doctor %>
-<%= image_tag "welcome.png" , size: "300X300", :alt => "dr login"%>
+        <%= link_to 'Log out', 'sessions/destroy',class:  'btn btn-block btn-white' %>
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<%#= render 'form', doc: @doctor %>
+<%= image_tag "start.png" , size: "300X300", :alt => "dr smiling and relaxing"%>
 
 
 

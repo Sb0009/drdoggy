@@ -11,14 +11,15 @@ def new
 end
 
 def create
+  flash.now[:alert] = "msg"
+  render :index
   @doctor = User.new(user_params)
-  if @doctor.save
-    flash[:success] = 'Welcome to the DrDoggy App!'
+  # if @doctor.save
+  #   flash.now[:success] = 'Welcome to the DrDoggy App!'
     redirect_to @doctor
-  else
     render 'new'
   end
-end
+
 
 def doctor_params
   params.require(:doctor).permit(:name, :email, :password,

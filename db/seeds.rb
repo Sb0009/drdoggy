@@ -11,16 +11,16 @@
 d1 = Doctor.create(name: 'John', email: 'cardio@gmail.com', location: 'Paris')
 d2 = Doctor.create(name: 'Houssem', email: 'the Boss.com', location: 'Hybride')
 
-p1 = Patient.create(name: 'Dan', location: 'NYC', email: 'dan@gmail.com', condition: 'loves cookies so much')
-p2 = Patient.create(name: 'Luke', location: 'Paris', email: '', condition: 'Stop smoking ')
+p1 = Patient.create(name: 'Dan', location: 'NYC', condition: 'loves cookies so much')
+p2 = Patient.create(name: 'Luke', location: 'Paris', condition: 'Stop smoking ')
 
-a1 = Appointment.create(patient: p2, doctor: d1, appointment_time: DateTime.now)
-a2 = Appointment.create(patient: p1, doctor: d2, appointment_time: DateTime.now)
-a3 = Appointment.create(patient: p2, doctor: d1, appointment_time: DateTime.now)
-a4 = Appointment.create(patient: p1, doctor: d2, appointment_time: DateTime.now)
-a5 = Appointment.create(patient: p2, doctor: d1, appointment_time: DateTime.now)
+a1 = Appointment.create(patient: p2, doctor: d1, appointment_time: Time.now)
+a2 = Appointment.create(patient: p1, doctor: d2, appointment_time: Time.now)
+a3 = Appointment.create(patient: p2, doctor: d1, appointment_time: Time.now)
+
 require 'faker'
+require 'date'
 Doctor.destroy_all
 # City.destroy_all
-Speciality.destroy_all
+# Specialty.destroy_all
 Patient.destroy_all

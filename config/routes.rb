@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get '/doctors/edit/:id' => 'doctors#edit'
   patch '/doctors/:id' => 'doctors#update'
   get '/doctors/destroy/:id' => 'doctors#destroy'
-
+  get '/specialities' => 'specialities#index'
   get '/patients' => 'patients#index'
   get '/patients/new' => 'patients#new'
   post '/patients' => 'patients#create'
@@ -28,6 +28,12 @@ Rails.application.routes.draw do
   post '/appointments' => 'appointments#create'
   get '/appointments/edit/:id' => 'appointments#edit'
   get '/appointments/destroy/:id' => 'appointments#destroy'
+
+
+
+
+
+
 
   # get '/cities', to: 'cities#index'
   # get '/cities/new', to: 'cities#new'

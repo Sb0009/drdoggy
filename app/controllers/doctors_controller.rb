@@ -23,7 +23,7 @@ class DoctorsController < ApplicationController
     doctor.name = params[:doctor][:name]
     doctor.location = params[:doctor][:location]
 
-    doctor.speciality = params[:doctor][:speciality
+    doctor.specialty = params[:doctor][:speciality
     ]
     doctor.save
     redirect_to doctors_path

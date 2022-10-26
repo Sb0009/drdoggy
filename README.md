@@ -13,9 +13,6 @@
     <img src="https://user-images.githubusercontent.com/96126445/196910946-7d738740-18ad-498a-bb28-97c485d28783.png" alt="exit" width="150 px">
        <img src="https://user-images.githubusercontent.com/96126445/197511950-7ad91c7e-c485-4351-aab7-6d703288051f.png" alt="signup" width="150 px">
 </p>
- 
-
-</p> 
 
 
 

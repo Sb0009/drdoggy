@@ -21,6 +21,7 @@
 
 
 <body ng-controller="account register" style="background:#232323;">
+
 <div id="page" style="width: 635px;height: 347px;">
   <div id="session_content" style="padding: 4px;">
     <div style="background-color: #EEEEEE;width: 523px;height: 213px;margin-top:12px;">
@@ -32,7 +33,7 @@
             # code here
           end
           form_for resource, as: resource_name, :url => admin_session_path , :remote => true do |f| %>
-        <table marging="5" padding="4px" size="88%" style="margin-left:37px;">
+        <table>
           <tr>
             <td></td>
             <td></td>
@@ -60,6 +61,169 @@
   <div style="clear: both;">&nbsp;</div>
 </div>
 <div style="max-width: 200px;" id="tiptip_holder"><div id="tiptip_arrow"><div id="tiptip_arrow_inner"></div></div><div id="tiptip_content"></div></div></body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div layout:fragment="dashboard-contents">-->
+        <form method="post" class="form mt-2" th:object="${doctor}"
+              th:action="@{'/partner/doctors/edit/'+${id}}">
+
+          <div class="card">
+            <div class="card-header bg-warning">
+              <div style="font-size: 20px;" class="ml-1">Add New Doctor</div>
+              <div class="text-muted">Please enter your doctor information</div>
+            </div>
+            <!-- card header -->
+
+            <div class="card-body">
+
+              <div class="container-fluid">
+
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label>Enter Doctor's name :</label> <input type="text" placeholder="Name"
+                                                                  name="name" class="form-control" th:field="*{name}" />
+                    </div>
+                    <div class="column">
+                      <label for="gender">Gender:</label>
+                      <div
+                        th:each="gender : ${T(com.jdc.clinic.entity.FamilyMember.Gender).values()}">
+                        <input type="radio" th:id="${gender}" th:value="${gender}" name="gender"
+                               th:field="*{gender}" /> <label th:for="${gender}"
+                                                              th:text="${gender.name()}"></label>
+                      </div>
+                    </div>
+                    <div class="form-group mt-2">
+
+                      <label>Enter Doctor's position :</label> <input type="text"
+                                                                      placeholder="Position" name="Position" class="form-control"
+                                                                      th:field="*{position}" />
+
+                    </div>
+                  </div>
+                  <!-- first column -->
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+
+                      <label>Select Doctor :</label> <select
+                      class="form-control mdb-select md-form" name="doctor"
+                      th:field="*{doctor}">
+                      <option value="Badyine"> Badyine</option>
+                    </select>
+
+                    </div>
+
+
+                      <div class="form-group">
+
+                     <label>Enter phone </label>
+                      <div class="phone-list">
+                        <div class="phone-input">
+                          <input type="tel" placeholder="Phone" name="phone1"
+                                 th:field="*{phones}" class="form-control" />
+                        </div>
+                      </div>
+                      <button type="button"
+                              class="btn mt-1 form-control btn-outline-info btn-add-phone"
+                              style="border-style: dashed;">
+                        <span><i class="far fa-plus"></i></span> Add New
+                      </button>
+                    </div>
+                     phone form
+</div>
+<!-- second column -->
+</div>
+<!-- row -->
+</div>
+<!-- container-fluid -->
+</div>
+<!-- card body -->
+<div class="form-group">
+  <div class="card-footer text-right bg-transparent">
+    <a class="btn btn-outline-success " href="#" th:href="@{/doctors/1}"
+       role="button">Cancel</a>
+    &nbsp;&nbsp;<button class="btn btn-outline-success"  href="#" th:href="@{/doctors/show}"type="submit" role="button">Submit</button>
+  </div>
+</div>
+<!-- card -->
+</div>
+</form>
+
+<script>
+    $(document.body).on('click', '.btn-remove-phone', function () {
+        $(this).closest('.phone-input').remove();
+    });
+
+    $('.btn-add-phone')
+        .on(
+            'click',
+            function () {
+                var index = $('.phone-input').length + 1;
+                $('.phone-list')
+                    .append(
+                        ''
+                        + '<div class="container-fluid phone-input">'
+                        + '<div class="row">'
+                        + '<input type="tel" placeholder="Phone" name="phone' + index + '" class="mt-1 col-11 form-control"/>'
+                        + '<button type="button" class="ml-1 btn btn-outline-danger mt-1 btn-remove-phone"><i class="fal fa-times"></i></button>'
+                        + '</div></div>');
+            });
+
+    $(document.body).on('click', '.btn-remove-email', function () {
+        $(this).closest('.email-input').remove();
+    });
+
+    $('.btn-add-email')
+        .on(
+            'click',
+            function () {
+                var index = $('.email-input').length + 1;
+                $('.email-list')
+                    .append(
+                        ''
+                        + '<div class="container-fluid email-input">'
+                        + '<div class="row">'
+                        + '<input type="email" placeholder="Email" name="mail' + index + '" class="mt-1 col-11 form-control"/>'
+                        + '<button type="button" class="ml-1 btn btn-outline-danger mt-1 btn-remove-email"><i class="fal fa-times"></i></button>'
+                        + '</div></div>');
+            });
+</script>
+
+</div>
+<style>
+    body
+    {
+        color: black;
+        background-color: #999999;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    a {
+        background: #29B6F6;
+        color: #fff;
+    }
+
+</style>
+
+
+
+
 </html>
 <style>
     input[type=text], input[type=password], input[type=email], textarea {
